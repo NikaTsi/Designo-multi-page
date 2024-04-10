@@ -38,9 +38,9 @@ export default function Navbar() {
         </div>)}
 
       <div className='hidden gap-[42px] md:flex'>
-        <Link className='text-[14px] text-[#333136] font-normal tracking-[2px] hover:underline hover:drop-shadow-text' rel="stylesheet" to="/aboutUs" >OUR COMPANY</Link>
-        <Link className='text-[14px] text-[#333136] font-normal tracking-[2px] hover:underline hover:drop-shadow-text' rel="stylesheet" to="/location" >LOCATIONS</Link>
-        <Link className='text-[14px] text-[#333136] font-normal tracking-[2px] hover:underline hover:drop-shadow-text' rel="stylesheet" to="/contact" >CONTACT</Link>
+        {data.navbar.map(item => (
+          <Link key={item.url} to={`${item.url}`} className='text-[14px] text-[#333136] font-normal tracking-[2px] hover:underline hover:drop-shadow-text'>{item.title}</Link>
+        ))}
       </div>
 
     </header>
